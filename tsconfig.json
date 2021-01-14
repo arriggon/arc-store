@@ -6,5 +6,12 @@
 */
 {
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./projects/arc/store/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/arc/store/tsconfig.spec.json"
+    }
+]
 }
