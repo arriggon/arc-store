@@ -30,7 +30,7 @@ export class StoreRegistry {
     this.registeredStores.delete(name);
   }
 
-  get(name: string): GenericStore<any> {
+  get(name: string): any {
     return this.registeredStores.get(name);
   }
 }
