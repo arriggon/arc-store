@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
+import { StoreRegistry } from './store-registry.service';
 
 @NgModule({
   declarations: [],
   imports: [],
-  exports: []
+  exports: [StoreRegistry]
 })
 export class StoreModule { }
