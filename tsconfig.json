@@ -12,6 +12,12 @@
     },
     {
       "path": "./projects/arc/store/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/testing-grounds/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/testing-grounds/tsconfig.spec.json"
     }
 ]
 }

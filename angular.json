@@ -42,6 +42,123 @@
           }
         }
       }
+    },
+    "testing-grounds": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/testing-grounds",
+      "sourceRoot": "projects/testing-grounds/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/testing-grounds",
+            "index": "projects/testing-grounds/src/index.html",
+            "main": "projects/testing-grounds/src/main.ts",
+            "polyfills": "projects/testing-grounds/src/polyfills.ts",
+            "tsConfig": "projects/testing-grounds/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/testing-grounds/src/favicon.ico",
+              "projects/testing-grounds/src/assets"
+            ],
+            "styles": [
+              "projects/testing-grounds/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/testing-grounds/src/environments/environment.ts",
+                  "with": "projects/testing-grounds/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "testing-grounds:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "testing-grounds:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "testing-grounds:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/testing-grounds/src/test.ts",
+            "polyfills": "projects/testing-grounds/src/polyfills.ts",
+            "tsConfig": "projects/testing-grounds/tsconfig.spec.json",
+            "karmaConfig": "projects/testing-grounds/karma.conf.js",
+            "assets": [
+              "projects/testing-grounds/src/favicon.ico",
+              "projects/testing-grounds/src/assets"
+            ],
+            "styles": [
+              "projects/testing-grounds/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/testing-grounds/tsconfig.app.json",
+              "projects/testing-grounds/tsconfig.spec.json",
+              "projects/testing-grounds/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/testing-grounds/e2e/protractor.conf.js",
+            "devServerTarget": "testing-grounds:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "testing-grounds:serve:production"
+            }
+          }
+        }
+      }
     }},
   "defaultProject": "@arc/store"
 }

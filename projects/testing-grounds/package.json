@@ -1,0 +1,7 @@
+{
+  "name": "@arc/testing-grounds",
+  "version": "0.0.1",
+  "dependencies": {
+    "@arc/store": "1.0.0"
+  }
+}

@@ -1,10 +1,6 @@
 import {BehaviorSubject} from 'rxjs';
-import {GetPostEffect} from '../effects/get/get-post.effect';
-import {SetPostEffect} from '../effects/set/set-post.effect';
-import {SetPreEffect} from '../effects/set/set-pre.effect';
-import {StoreEffects} from '../effects/store-effects';
-import {GetPreEffect} from '../effects/get/get-pre.effect';
-import {GenericStore} from '../generics/store.generic';
+import {GetPostEffect, SetPostEffect, SetPreEffect, StoreEffects, GetPreEffect} from '../effects';
+import {GenericStore} from '../generics';
 
 export class ItemStore<T> implements GenericStore<T> {
   private readonly source = new BehaviorSubject<T>(this.initial);

@@ -1,14 +1,7 @@
 import {BehaviorSubject} from 'rxjs';
-import {StoreEffects} from '../effects/store-effects';
-import {AddPreEffect} from '../effects/add/add-pre.effect';
-import {GetPostEffect} from '../effects/get/get-post.effect';
-import {SetPostEffect} from '../effects/set/set-post.effect';
-import {AddPostEffect} from '../effects/add/add-post.effect';
-import {RemovePreEffect} from '../effects/remove/remove-pre.effect';
-import {SetPreEffect} from '../effects/set/set-pre.effect';
-import {GetPreEffect} from '../effects/get/get-pre.effect';
-import {RemovePostEffect} from '../effects/remove/remove-post.effect';
-import {GenericIterableStore} from '../generics/iterable-store.generic';
+import {StoreEffects, RemovePostEffect, AddPreEffect,
+  GetPostEffect, SetPostEffect, AddPostEffect, RemovePreEffect, SetPreEffect, GetPreEffect} from '../effects';
+import {GenericIterableStore} from '../generics';
 
 export class IterableStore<T> implements GenericIterableStore<T> {
   private readonly source = new BehaviorSubject<Array<T>>(this.initial);

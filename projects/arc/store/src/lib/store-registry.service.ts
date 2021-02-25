@@ -1,8 +1,7 @@
 import {Injectable} from '@angular/core';
-import {StoreModule} from './store.module';
-import {IterableStore, IterableStoreEffects} from './stores/iterable.store';
-import {ItemStore, ItemStoreEffects} from './stores/item.store';
-import {GenericStore} from './generics/store.generic';
+import {IterableStore, IterableStoreEffects} from './stores';
+import {ItemStore, ItemStoreEffects} from './stores';
+import {GenericStore} from './generics';
 
 @Injectable({
   providedIn: 'root'

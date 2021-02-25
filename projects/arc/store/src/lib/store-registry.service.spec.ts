@@ -1,7 +1,7 @@
 import {StoreRegistry} from './store-registry.service';
 import {TestBed} from '@angular/core/testing';
-import {InteractPreEffect} from './effects/interact/interact-pre.effect';
-import {ItemStore} from './stores/item.store';
+import {InteractPreEffect} from './effects';
+import {ItemStore} from './stores';
 
 describe('StoreRegistry', () => {
   let service: StoreRegistry;

@@ -5,6 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "ng build @arc/store",
+    "package": "cd dist/arc/store && npm pack",
+    "release": "npm run build:lib && npm run package",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
